@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Work+Sans:wght@100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /*box-sizing: content-box; /*valores por defecto*/
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    color: white;
+}
+
+.navLista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    flex-grow: 1; /* Permite que la lista ocupe espacio para centrarse */
+    justify-content: center; /* Centra la lista verticalmente en el espacio restante */
+}
+
+.footerLink {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.footerDireccion{
+    text-align: center;
+}
+
+.anclaClase {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-nav {
+    align-self: flex-start; /* Posiciona la imagen en la parte superior izquierda */
+    width: 100%;
+    height: auto;
+    margin-bottom: 2vh; /* Añade espacio debajo de la imagen */
+}
+
+.contenidoCentradoNosotros{
+    text-align: center;
+}
+
+.formatoPrincipal {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10vh auto;
+    grid-template-rows: auto auto 15vh;
+    grid-template-areas: 
+        "nav header" 
+        "nav main" 
+        "nav footer";
+    header{
+        background-color: #FEECE2;
+        grid-area: header;
+        height: 70vh; /* Ajusta según el tamaño que necesitas */
+    }
+    nav {
+        background-color: #9c8874;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10vh; /* Ajusta según el ancho del nav */
+        height: 100vh; /* Ocupa toda la altura de la ventana */
+        display: flex;
+        flex-direction: column; /* Coloca los elementos en una columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        justify-content: space-between; /* Espacia los elementos para permitir el centrado de los enlaces */
+        z-index: 1;
+        padding: 2vh 0; /* Añade espacio superior e inferior si lo deseas */
+    }
+    main{
+        background-color: #bd9577;
+        grid-area: main;
+    }
+    footer{
+        background-color: #E2BFB3;
+        grid-area: footer;
+    }
+}
+
+.fondoHeaderNosotros {
+    background-image: url(../assets/img/background_header_nosotros.jpg);
+    background-size: cover; /* Asegura que la imagen cubra todo el área del header */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Asegura que el header ocupe el espacio completo en el layout */
+}
+
+#nosotros {
+    display: flex;
+    justify-content: space-around; /* Distribuye las tarjetas horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si es necesario */
+    gap: 2rem; /* Espacio entre las tarjetas */
+    padding: 2rem;
+    text-align: center; /* Centra el contenido dentro de cada tarjeta */
+    background-color: white;
+}
+
+#nosotros h3 {
+    font-size: 2rem; /* Ajusta el tamaño según lo necesites */
+    color: #4A4A4A; /* Color similar al ejemplo */
+    font-weight: 300; /* Fuente ligera para un estilo elegante */
+    text-align: center;
+    margin-bottom: 2rem; /* Espacio debajo del encabezado */
+    font-family: 'Roboto Condensed', sans-serif; /* Asegura la misma fuente */
+    letter-spacing: 0.1em; /* Espacio entre letras para darle más elegancia */
+}
+
+
+#nosotros div {
+    max-width: 300px; /* Controla el ancho máximo de cada tarjeta */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nosotros img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #ccc; /* Añade un borde alrededor de la imagen */
+    margin-bottom: 1rem; /* Espacio debajo de la imagen */
+}
+
+#nosotros p {
+    font-size: 1rem;
+    color: #333; /* Color de texto */
+    line-height: 1.5; /* Espacio entre líneas */
+    font-weight: normal;
+}
+
+#nosotros p:first-child {
+    font-weight: bold;
+    margin-top: 0; /* Elimina cualquier margen superior */
+}
+
+main > div {
+    background-color: #E2BFB3; /* Ajusta este color al tono deseado */
+    color: white; /* Ajusta el color del texto si es necesario */
+    padding: 3rem 2rem; /* Añade un poco de espacio interno */
+    text-align: center;
+}
+
+.contenidoCentradoNosotros {
+    font-size: 1.5rem; /* Ajusta el tamaño del título */
+    font-weight: bold;
+    margin-bottom: 1rem; /* Espacio debajo del título */
+    color: white;
+}
+
+main section {
+    font-size: 1rem;
+    line-height: 1.8; /* Espacio entre líneas */
+    color: white;
+    margin-top: 1rem;
+    max-width: 150vh; /* Limita el ancho para mejorar la legibilidad */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-images {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.image-container {
+    position: relative;
+    width: 50%; /* Ajusta el ancho de cada contenedor al 50% para que ambas imágenes ocupen el mismo espacio */
+    height: 300px; /* Define una altura uniforme para ambos contenedores */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsión */
+    display: block;
+    filter: brightness(0.8); /* Da un efecto oscuro para que el texto destaque */
+}
+
+
+.image-title {
+    position: absolute;
+    top: 50%; /* Asegura que el texto esté centrado verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem; /* Ajusta según el tamaño deseado */
+    color: white;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 1.2; /* Ajuste de la altura de línea para controlar el espaciado */
+}
+
+
+
+.fondoHeaderSalud {
+    background-image: url(../assets/img/fotoMainSalud2.jpg);
+    background-size: cover; /* Asegura que la imagen cubra todo el área del header */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Asegura que el header ocupe el espacio completo en el layout */
+}
+
+.fondoHeaderEstetica {
+    background-image: url(../assets/img/fotoMainEstetica.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh; /* Ocupa el 60% de la altura del viewport */
+}
+
+.fondoHeaderContacto {
+    background-image: url(../assets/img/background_header_Contactos.jpg);
+    background-position: center; /* Centra la imagen en el header */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: contain; /* Ajusta la imagen para que se muestre completa */
+    position: relative;
+}
+
+.tituloHeader {
+    position: absolute;
+    top: 40%; /* Centra el texto verticalmente */
+    left: 50%; /* Centra el texto horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para mantener el texto en el centro */
+    color: white;
+    font-size: 4rem; /* Ajusta el tamaño según tus necesidades */
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade sombra al texto */
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.contact-form {
+    background-color: #f3f3f6; /* Color de fondo similar */
+    padding: 2rem;
+    max-width: 100rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-group.full-width {
+    flex: 100%; /* Ocupa todo el ancho para el mensaje */
+}
+
+label {
+    font-size: 0.9rem;
+    color: #8a8a8a;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #bfbfbf;
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
+    color: #000; /* Asegura que el texto ingresado sea negro */
+}
+
+textarea {
+    resize: none;
+    color: #000; /* Asegura que el texto ingresado en el textarea también sea negro */
+}
+
+button[type="submit"] {
+    padding: 0.7rem 1.5rem;
+    background-color: #e2e2e2;
+    color: #333;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ccc;
+}
+
+.info-clinic, .testimonials {
+    width: 100%; /* Ocupa el ancho completo */
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #E2BFB3;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.map-section iframe {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content-Contato {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el mapa y la información de contacto */
+    align-items: center; /* Centra verticalmente */
+    padding: 1rem;
+    background-color: #E2BFB3; /* Ajusta el color de fondo según sea necesario */
+}
+
+
+.footerDireccionContacto {
+    flex: 1;
+    text-align: center;
+    padding-left: 16rem; /* Espacio a la izquierda de la información de contacto */
+}
+
+.footerLinkContacto {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.map-testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+
+.testimonials {
+    flex: 1;
+    background-color: #f3f3f6;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials h3 {
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.fondoHeaderCarrito {
+    background-color: #E2BFB3; /* Puedes cambiar a una imagen si es necesario */
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrito-section {
+    padding: 2rem;
+    background-color: #f3f3f6;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carrito-section h3 {
+    color: #4A4A4A; /* Cambia este color al que prefieras para el título */
+}
+
+.producto-detalle h4 {
+    color: #333; /* Cambia este color para el título del producto */
+    font-size: 1.2rem;
+    font-weight: 600; /* Añade un poco más de peso si lo deseas */
+}
+
+.producto-detalle p {
+    color: #555; /* Cambia este color para el precio */
+    font-size: 1rem;
+}
+
+.carrito-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.producto-detalle {
+    flex: 1;
+}
+
+.boton-eliminar,
+.boton-comprar {
+    padding: 0.5rem 1rem;
+    background-color: #9c8874;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-eliminar:hover,
+.boton-comprar:hover {
+    background-color: #755d4a;
+}
+
+
+
+
+
+
+
+
